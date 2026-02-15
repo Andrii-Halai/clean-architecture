@@ -38,5 +38,26 @@ public class PhysicianService : IPhysicianService
             physician.Npi
         );
     }
+    
+    public async Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
+    {
+        var createdPhysician = await _dbManager.CreatePhysicianAsync(physicianDto);
+        
+        return new PhysicianDto(
+            createdPhysician.Id,
+            createdPhysician.Name,
+            createdPhysician.LastName,
+            createdPhysician.MI,
+            createdPhysician.Email,
+            createdPhysician.Phone,
+            createdPhysician.Phone2,
+            createdPhysician.Description,
+            createdPhysician.Comment,
+            createdPhysician.IDCenter,
+            createdPhysician.NotificationTemplate,
+            createdPhysician.NotificationCriteria,
+            createdPhysician.Npi
+        );
+    }
 }
 

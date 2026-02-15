@@ -1,10 +1,11 @@
 using Application.Abstractions;
+using Application.Physicians;
 using Domain.PhysicianAggregate;
 
 namespace Infrastructure.Data;
 
 /// <summary>
-/// Mock implementation of IDbManager for development/testing purposes
+/// Mock implementation of IDbManager for learning purposes
 /// </summary>
 public class MockDbManager : IDbManager
 {
@@ -12,7 +13,6 @@ public class MockDbManager : IDbManager
 
     public MockDbManager()
     {
-        // Initialize with sample data
         _physicians = new List<Physician>
         {
             new Physician
@@ -59,6 +59,47 @@ public class MockDbManager : IDbManager
         }
 
         return Task.FromResult<T?>(null);
+    }
+
+    public Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
+    {
+        var id = _physicians.Max(p => p.Id) + 1;
+        var physician = new Physician
+        {
+            Id = id,
+            Name = physicianDto.Name,
+            LastName = physicianDto.LastName,
+            MI = physicianDto.MI,
+            Email = physicianDto.Email,
+            Phone = physicianDto.Phone,
+            Phone2 = physicianDto.Phone2,
+            Description = physicianDto.Description,
+            Comment = physicianDto.Comment,
+            IDCenter = physicianDto.IDCenter,
+            NotificationTemplate = physicianDto.NotificationTemplate,
+            NotificationCriteria = physicianDto.NotificationCriteria,
+            Npi = physicianDto.Npi
+        };
+        
+        _physicians.Add(physician);
+        
+        var physicianDtoResult = new PhysicianDto(
+            physician.Id,
+            physician.Name,
+            physician.LastName,
+            physician.MI,
+            physician.Email,
+            physician.Phone,
+            physician.Phone2,
+            physician.Description,
+            physician.Comment,
+            physician.IDCenter,
+            physician.NotificationTemplate,
+            physician.NotificationCriteria,
+            physician.Npi
+        );
+        
+        return Task.FromResult(physicianDtoResult);
     }
 }
 

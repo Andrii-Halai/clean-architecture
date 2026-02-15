@@ -6,5 +6,6 @@ namespace Application.Physicians;
 public interface IPhysicianService
 {
     Task<PhysicianDto?> GetByIdAsync(int id);
+    Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physician);
 }
 

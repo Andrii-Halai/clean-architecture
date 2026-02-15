@@ -19,6 +19,11 @@ public static class PhysicianEndpoints
             .WithSummary("Get a physician by ID")
             .Produces<PhysicianDto>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
+
+        group.MapPost("/CreatePhysician", CreatePhysician)
+            .WithName("CreatePhysician")
+            .WithTags("Physicians")
+            .Produces<PhysicianDto>(StatusCodes.Status201Created);
     }
 
     private static async Task<IResult> GetPhysicianById(
@@ -31,6 +36,14 @@ public static class PhysicianEndpoints
             return Results.NotFound(new { Message = $"Physician with ID {id} not found" });
 
         return Results.Ok(physician);
+    }
+    
+    private static async Task<IResult> CreatePhysician(
+        [FromServices] IPhysicianService physicianService,
+        [FromBody] CreatePhysicianDto physicianDto)
+    {
+        var createdPhysician = await physicianService.CreatePhysicianAsync(physicianDto);
+        return Results.Created($"/api/physicians/{createdPhysician.Id}", createdPhysician);
     }
 }
 

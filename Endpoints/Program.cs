@@ -5,17 +5,14 @@ using Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register application services
 builder.Services.AddScoped<IDbManager, MockDbManager>();
 builder.Services.AddScoped<IPhysicianService, PhysicianService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -24,7 +21,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Map endpoints
+
 app.MapPhysicianEndpoints();
 
 app.Run();

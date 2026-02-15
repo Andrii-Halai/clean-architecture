@@ -19,3 +19,18 @@ public record PhysicianDto(
     string? Npi
 );
 
+public record CreatePhysicianDto(
+    string? Name,
+    string? LastName,
+    string? MI,
+    string? Email,
+    string? Phone,
+    string? Phone2,
+    string? Description,
+    string? Comment,
+    int? IDCenter,
+    string? NotificationTemplate,
+    string? NotificationCriteria,
+    string? Npi
+);
+
