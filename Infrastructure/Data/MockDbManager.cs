@@ -1,5 +1,4 @@
 using Application.Abstractions;
-using Application.Physicians;
 using Domain.PhysicianAggregate;
 
 namespace Infrastructure.Data;
@@ -61,45 +60,16 @@ public class MockDbManager : IDbManager
         return Task.FromResult<T?>(null);
     }
 
-    public Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
+    public Task<T> CreateAsync<T>(T entity) where T : class
     {
-        var id = _physicians.Max(p => p.Id) + 1;
-        var physician = new Physician
+        if (entity is Physician physician)
         {
-            Id = id,
-            Name = physicianDto.Name,
-            LastName = physicianDto.LastName,
-            MI = physicianDto.MI,
-            Email = physicianDto.Email,
-            Phone = physicianDto.Phone,
-            Phone2 = physicianDto.Phone2,
-            Description = physicianDto.Description,
-            Comment = physicianDto.Comment,
-            IDCenter = physicianDto.IDCenter,
-            NotificationTemplate = physicianDto.NotificationTemplate,
-            NotificationCriteria = physicianDto.NotificationCriteria,
-            Npi = physicianDto.Npi
-        };
-        
-        _physicians.Add(physician);
-        
-        var physicianDtoResult = new PhysicianDto(
-            physician.Id,
-            physician.Name,
-            physician.LastName,
-            physician.MI,
-            physician.Email,
-            physician.Phone,
-            physician.Phone2,
-            physician.Description,
-            physician.Comment,
-            physician.IDCenter,
-            physician.NotificationTemplate,
-            physician.NotificationCriteria,
-            physician.Npi
-        );
-        
-        return Task.FromResult(physicianDtoResult);
+            physician.Id = _physicians.Max(p => p.Id) + 1;
+            _physicians.Add(physician);
+            return Task.FromResult(entity);
+        }
+
+        throw new NotSupportedException($"Entity type {typeof(T).Name} is not supported");
     }
 }
 

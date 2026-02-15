@@ -1,5 +1,3 @@
-using Application.Physicians;
-
 namespace Application.Abstractions;
 
 /// <summary>
@@ -8,5 +6,5 @@ namespace Application.Abstractions;
 public interface IDbManager
 {
     Task<T?> GetByIdAsync<T>(int id) where T : class;
-    Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physician);
+    Task<T> CreateAsync<T>(T entity) where T : class;
 }
