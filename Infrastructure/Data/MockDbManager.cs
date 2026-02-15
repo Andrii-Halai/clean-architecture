@@ -71,5 +71,10 @@ public class MockDbManager : IDbManager
 
         throw new NotSupportedException($"Entity type {typeof(T).Name} is not supported");
     }
+    
+    public Task<List<Physician>> GetAllPhysiciansAsync()
+    {
+        return Task.FromResult(_physicians);
+    }
 }
 

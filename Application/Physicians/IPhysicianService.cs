@@ -7,5 +7,6 @@ public interface IPhysicianService
 {
     Task<PhysicianDto?> GetByIdAsync(int id);
     Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physician);
+    Task<List<PhysicianDto>> GetAllPhysiciansAsync();
 }
 

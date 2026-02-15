@@ -75,5 +75,25 @@ public class PhysicianService : IPhysicianService
             createdPhysician.Npi
         );
     }
+
+    public async Task<List<PhysicianDto>> GetAllPhysiciansAsync()
+    {
+        var physicians = await _dbManager.GetAllPhysiciansAsync();
+        return physicians.Select(p => new PhysicianDto(
+            p.Id,
+            p.Name,
+            p.LastName,
+            p.MI,
+            p.Email,
+            p.Phone,
+            p.Phone2,
+            p.Description,
+            p.Comment,
+            p.IDCenter,
+            p.NotificationTemplate,
+            p.NotificationCriteria,
+            p.Npi
+        )).ToList();
+    }
 }
 

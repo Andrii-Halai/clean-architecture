@@ -24,6 +24,11 @@ public static class PhysicianEndpoints
             .WithName("CreatePhysician")
             .WithTags("Physicians")
             .Produces<PhysicianDto>(StatusCodes.Status201Created);
+        
+        group.MapGet("/GetAllPhysicians", GetAllPhysicians)
+            .WithName("GetAllPhysicians")
+            .WithTags("Physicians")
+            .Produces<List<PhysicianDto>>(StatusCodes.Status200OK);
     }
 
     private static async Task<IResult> GetPhysicianById(
@@ -44,6 +49,13 @@ public static class PhysicianEndpoints
     {
         var createdPhysician = await physicianService.CreatePhysicianAsync(physicianDto);
         return Results.Created($"/api/physicians/{createdPhysician.Id}", createdPhysician);
+    }
+    
+    private static async Task<IResult> GetAllPhysicians(
+        [FromServices] IPhysicianService physicianService)
+    {
+        var physicians = await physicianService.GetAllPhysiciansAsync();
+        return Results.Ok(physicians);
     }
 }
 
