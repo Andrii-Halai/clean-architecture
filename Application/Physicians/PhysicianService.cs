@@ -22,21 +22,7 @@ public class PhysicianService : IPhysicianService
         if (physician == null)
             return null;
 
-        return new PhysicianDto(
-            physician.Id,
-            physician.Name,
-            physician.LastName,
-            physician.MI,
-            physician.Email,
-            physician.Phone,
-            physician.Phone2,
-            physician.Description,
-            physician.Comment,
-            physician.IDCenter,
-            physician.NotificationTemplate,
-            physician.NotificationCriteria,
-            physician.Npi
-        );
+        return ToDto(physician);
     }
     
     public async Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
@@ -59,41 +45,32 @@ public class PhysicianService : IPhysicianService
 
         var createdPhysician = await _dbManager.CreateAsync(entity);
 
-        return new PhysicianDto(
-            createdPhysician.Id,
-            createdPhysician.Name,
-            createdPhysician.LastName,
-            createdPhysician.MI,
-            createdPhysician.Email,
-            createdPhysician.Phone,
-            createdPhysician.Phone2,
-            createdPhysician.Description,
-            createdPhysician.Comment,
-            createdPhysician.IDCenter,
-            createdPhysician.NotificationTemplate,
-            createdPhysician.NotificationCriteria,
-            createdPhysician.Npi
-        );
+        return ToDto(createdPhysician);
     }
 
     public async Task<List<PhysicianDto>> GetAllPhysiciansAsync()
     {
         var physicians = await _dbManager.GetAllPhysiciansAsync();
-        return physicians.Select(p => new PhysicianDto(
-            p.Id,
-            p.Name,
-            p.LastName,
-            p.MI,
-            p.Email,
-            p.Phone,
-            p.Phone2,
-            p.Description,
-            p.Comment,
-            p.IDCenter,
-            p.NotificationTemplate,
-            p.NotificationCriteria,
-            p.Npi
-        )).ToList();
+        return physicians.Select(ToDto).ToList();
+    }
+
+    private static PhysicianDto ToDto(Physician physician)
+    {
+        return new PhysicianDto(
+            physician.Id,
+            physician.Name,
+            physician.LastName,
+            physician.MI,
+            physician.Email,
+            physician.Phone,
+            physician.Phone2,
+            physician.Description,
+            physician.Comment,
+            physician.IDCenter,
+            physician.NotificationTemplate,
+            physician.NotificationCriteria,
+            physician.Npi
+        );
     }
 }
 

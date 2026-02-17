@@ -4,58 +4,46 @@ using Microsoft.AspNetCore.Mvc;
 namespace Endpoints.Physicians;
 
 /// <summary>
-/// Physician API endpoints
+/// Physician API controller
 /// </summary>
-public static class PhysicianEndpoints
+[ApiController]
+[Route("api/[controller]")]
+public class PhysiciansController : ControllerBase
 {
-    public static void MapPhysicianEndpoints(this IEndpointRouteBuilder app)
+    private readonly IPhysicianService _physicianService;
+
+    public PhysiciansController(IPhysicianService physicianService)
     {
-        var group = app.MapGroup("/api/physicians")
-            .WithTags("Physicians")
-            .WithOpenApi();
-
-        group.MapGet("/{id:int}", GetPhysicianById)
-            .WithName("GetPhysicianById")
-            .WithSummary("Get a physician by ID")
-            .Produces<PhysicianDto>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
-
-        group.MapPost("/CreatePhysician", CreatePhysician)
-            .WithName("CreatePhysician")
-            .WithTags("Physicians")
-            .Produces<PhysicianDto>(StatusCodes.Status201Created);
-        
-        group.MapGet("/GetAllPhysicians", GetAllPhysicians)
-            .WithName("GetAllPhysicians")
-            .WithTags("Physicians")
-            .Produces<List<PhysicianDto>>(StatusCodes.Status200OK);
+        _physicianService = physicianService;
     }
-
-    private static async Task<IResult> GetPhysicianById(
-        [FromServices] IPhysicianService physicianService,
-        [FromRoute] int id)
+    
+    [HttpGet("{id:int}")]
+    [ProducesResponseType(typeof(PhysicianDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetPhysicianById(int id)
     {
-        var physician = await physicianService.GetByIdAsync(id);
+        var physician = await _physicianService.GetByIdAsync(id);
 
         if (physician == null)
-            return Results.NotFound(new { Message = $"Physician with ID {id} not found" });
+            return NotFound(new { Message = $"Physician with ID {id} not found" });
 
-        return Results.Ok(physician);
+        return Ok(physician);
     }
     
-    private static async Task<IResult> CreatePhysician(
-        [FromServices] IPhysicianService physicianService,
-        [FromBody] CreatePhysicianDto physicianDto)
+    [HttpPost]
+    [ProducesResponseType(typeof(PhysicianDto), StatusCodes.Status201Created)]
+    public async Task<IActionResult> CreatePhysician([FromBody] CreatePhysicianDto physicianDto)
     {
-        var createdPhysician = await physicianService.CreatePhysicianAsync(physicianDto);
-        return Results.Created($"/api/physicians/{createdPhysician.Id}", createdPhysician);
+        var createdPhysician = await _physicianService.CreatePhysicianAsync(physicianDto);
+        return CreatedAtAction(nameof(GetPhysicianById), new { id = createdPhysician.Id }, createdPhysician);
     }
-    
-    private static async Task<IResult> GetAllPhysicians(
-        [FromServices] IPhysicianService physicianService)
+
+    [HttpGet]
+    [ProducesResponseType(typeof(List<PhysicianDto>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetAllPhysicians()
     {
-        var physicians = await physicianService.GetAllPhysiciansAsync();
-        return Results.Ok(physicians);
+        var physicians = await _physicianService.GetAllPhysiciansAsync();
+        return Ok(physicians);
     }
 }
 
