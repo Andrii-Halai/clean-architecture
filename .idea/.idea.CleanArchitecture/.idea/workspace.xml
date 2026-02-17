@@ -10,10 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Abstractions/IDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Abstractions/IDbManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Physicians/IPhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Physicians/IPhysicianService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Physicians/PhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Physicians/PhysicianService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Data/MockDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Data/MockDbManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/PhysicianAggregate/Physician.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/PhysicianAggregate/Physician.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +39,11 @@
     <setting file="file://$PROJECT_DIR$/Application/Physicians/IPhysicianService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Physicians/PhysicianDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Application/Physicians/PhysicianService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Common/IAggregateRoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Common/IEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/PhysicianAggregate/Physician.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Endpoints/Physicians/PhysicianEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Data/MockDbManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Database/SQLManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -118,6 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771156652976</updated>
       <workItem from="1771156656660" duration="3429000" />
+      <workItem from="1771311875101" duration="673000" />
     </task>
     <servers />
   </component>

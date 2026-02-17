@@ -1,6 +1,8 @@
+using Domain.Common;
+
 namespace Domain.PhysicianAggregate;
 
-public class Physician
+public class Physician : IEntity, IAggregateRoot
 {
     public int Id { get; set; }
     
