@@ -10,7 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/PhysicianAggregate/Physician.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/PhysicianAggregate/Physician.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Endpoints/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Endpoints/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771156652976</updated>
       <workItem from="1771156656660" duration="3429000" />
-      <workItem from="1771311875101" duration="673000" />
+      <workItem from="1771311875101" duration="2206000" />
     </task>
     <servers />
   </component>

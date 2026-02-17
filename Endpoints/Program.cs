@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IDbManager, MockDbManager>();
+builder.Services.AddSingleton<IDbManager, MockDbManager>(); // for testing purposes
 builder.Services.AddScoped<IPhysicianService, PhysicianService>();
 
 var app = builder.Build();
