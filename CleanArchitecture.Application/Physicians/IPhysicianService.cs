@@ -1,3 +1,5 @@
+using CleanArchitecture.Application.Abstractions;
+
 namespace CleanArchitecture.Application.Physicians;
 
 /// <summary>

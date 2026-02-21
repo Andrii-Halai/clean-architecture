@@ -12,20 +12,21 @@ namespace CleanArchitecture.Application.Physicians;
 public class PhysicianService : IPhysicianService
 {
     private readonly IDbManager _dbManager;
+    private readonly IPhysicianRepository _physicianRepository;
 
-    public PhysicianService(IDbManager dbManager)
+    public PhysicianService(IDbManager dbManager, IPhysicianRepository physicianRepository)
     {
         _dbManager = dbManager;
+        _physicianRepository = physicianRepository;
     }
 
     public async Task<PhysicianDto?> GetByIdAsync(int id)
     {
-        var physician = await _dbManager.GetByIdAsync<Physician>(id);
+        // var physician = await _dbManager.GetByIdAsync<Physician>(id);
+        var physician = await _physicianRepository.GetByIdAsync(id);
+        await _physicianRepository.SaveChangesAsync();
         
-        if (physician == null)
-            return null;
-
-        return ToDto(physician);
+        return physician == null ? null : ToDto(physician);
     }
     
     public async Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
@@ -46,14 +47,22 @@ public class PhysicianService : IPhysicianService
             npi: physicianDto.Npi
         );
 
-        var createdPhysician = await _dbManager.CreateAsync(entity);
+        var createdPhysician = await _physicianRepository.CreateAsync(entity);
+        await _physicianRepository.SaveChangesAsync();
 
         return ToDto(createdPhysician);
     }
 
     public async Task<List<PhysicianDto>> GetAllPhysiciansAsync()
     {
-        var physicians = await _dbManager.GetAllPhysiciansAsync();
+        var physicians = await _physicianRepository.GetAllAsync();
+        return physicians.Select(ToDto).ToList();
+    }
+
+    public async Task<List<PhysicianDto>> GetAllAsync()
+    {
+        var physicians = await _physicianRepository.GetAllAsync();
+        await _physicianRepository.SaveChangesAsync();
         return physicians.Select(ToDto).ToList();
     }
 
