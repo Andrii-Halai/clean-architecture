@@ -3,6 +3,9 @@ using Domain.PhysicianAggregate;
 
 namespace Application.Physicians;
 
+// Todo: Зробити приклад із FastEndpoints
+// Repository pattern (generic)
+
 /// <summary>
 /// Service implementation for Physician operations
 /// </summary>
