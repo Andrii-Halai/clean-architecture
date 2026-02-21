@@ -11,18 +11,15 @@ namespace CleanArchitecture.Application.Physicians;
 /// </summary>
 public class PhysicianService : IPhysicianService
 {
-    private readonly IDbManager _dbManager;
     private readonly IPhysicianRepository _physicianRepository;
 
-    public PhysicianService(IDbManager dbManager, IPhysicianRepository physicianRepository)
+    public PhysicianService(IPhysicianRepository physicianRepository)
     {
-        _dbManager = dbManager;
         _physicianRepository = physicianRepository;
     }
 
     public async Task<PhysicianDto?> GetByIdAsync(int id)
     {
-        // var physician = await _dbManager.GetByIdAsync<Physician>(id);
         var physician = await _physicianRepository.GetByIdAsync(id);
         await _physicianRepository.SaveChangesAsync();
         

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Application", "CleanArchitecture.Application\CleanArchitecture.Application.csproj", "{174BD66E-3DE3-4D17-ABF5-23E58B00E7FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.FastEndpoints", "CleanArchitecture.FastEndpoints\CleanArchitecture.FastEndpoints.csproj", "{455C68E6-7C3A-4FBE-964C-1A30A5201756}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{174BD66E-3DE3-4D17-ABF5-23E58B00E7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{174BD66E-3DE3-4D17-ABF5-23E58B00E7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{174BD66E-3DE3-4D17-ABF5-23E58B00E7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455C68E6-7C3A-4FBE-964C-1A30A5201756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455C68E6-7C3A-4FBE-964C-1A30A5201756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455C68E6-7C3A-4FBE-964C-1A30A5201756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455C68E6-7C3A-4FBE-964C-1A30A5201756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
