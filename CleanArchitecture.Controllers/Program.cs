@@ -1,6 +1,6 @@
-using Application.Abstractions;
-using Application.Physicians;
-using Infrastructure.Data;
+using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Application.Physicians;
+using CleanArchitecture.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

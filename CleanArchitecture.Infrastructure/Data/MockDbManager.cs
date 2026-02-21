@@ -1,7 +1,7 @@
-using Application.Abstractions;
-using Domain.PhysicianAggregate;
+using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Domain.PhysicianAggregate;
 
-namespace Infrastructure.Data;
+namespace CleanArchitecture.Infrastructure.Data;
 
 /// <summary>
 /// Mock implementation of IDbManager for learning purposes

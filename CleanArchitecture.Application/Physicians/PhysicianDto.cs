@@ -1,4 +1,4 @@
-namespace Application.Physicians;
+namespace CleanArchitecture.Application.Physicians;
 
 /// <summary>
 /// Data Transfer Object for Physician

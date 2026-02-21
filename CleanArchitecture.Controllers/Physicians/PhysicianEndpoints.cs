@@ -1,7 +1,7 @@
-using Application.Physicians;
+using CleanArchitecture.Application.Physicians;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Endpoints.Physicians;
+namespace CleanArchitecture.Controllers.Physicians;
 
 /// <summary>
 /// Physician API controller

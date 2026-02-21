@@ -1,6 +1,6 @@
-using Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.PhysicianAggregate;
 
-namespace Application.Abstractions;
+namespace CleanArchitecture.Application.Abstractions;
 
 /// <summary>
 /// Database manager abstraction for data access operations

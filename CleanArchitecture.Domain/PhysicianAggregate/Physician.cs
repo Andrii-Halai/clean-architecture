@@ -1,6 +1,6 @@
-using Domain.Common;
+using CleanArchitecture.Domain.Common;
 
-namespace Domain.PhysicianAggregate;
+namespace CleanArchitecture.Domain.PhysicianAggregate;
 
 public class Physician : IEntity, IAggregateRoot
 {

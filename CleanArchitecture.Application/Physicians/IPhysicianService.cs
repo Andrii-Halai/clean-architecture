@@ -1,4 +1,4 @@
-namespace Application.Physicians;
+namespace CleanArchitecture.Application.Physicians;
 
 /// <summary>
 /// Service interface for Physician operations

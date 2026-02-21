@@ -1,7 +1,7 @@
-using Application.Abstractions;
-using Domain.PhysicianAggregate;
+using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Domain.PhysicianAggregate;
 
-namespace Application.Physicians;
+namespace CleanArchitecture.Application.Physicians;
 
 // Todo: Зробити приклад із FastEndpoints
 // Repository pattern (generic)
