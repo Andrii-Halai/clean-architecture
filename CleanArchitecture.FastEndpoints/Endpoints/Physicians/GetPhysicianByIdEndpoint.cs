@@ -3,11 +3,11 @@ using FastEndpoints;
 
 namespace CleanArchitecture.FastEndpoints.Endpoints.Physicians;
 
-public class GetPhysicianById : EndpointWithoutRequest<PhysicianDto>
+public class GetPhysicianByIdEndpoint : EndpointWithoutRequest<PhysicianDto>
 {
     private readonly IPhysicianService _physicianService;
 
-    public GetPhysicianById(IPhysicianService physicianService)
+    public GetPhysicianByIdEndpoint(IPhysicianService physicianService)
     {
         _physicianService = physicianService;
     }

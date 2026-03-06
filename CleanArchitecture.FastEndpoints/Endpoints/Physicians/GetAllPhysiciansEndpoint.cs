@@ -6,12 +6,7 @@ namespace CleanArchitecture.FastEndpoints.Endpoints.Physicians;
 
 public class GetAllPhysiciansEndpoint : EndpointWithoutRequest<GetAllPhysiciansResponse>
 {
-    private IPhysicianService _physicianService;
-    
-    public GetAllPhysiciansEndpoint(IPhysicianService physicianService)
-    {
-        _physicianService = physicianService;
-    }
+    protected IPhysicianService PhysicianService { get; set; } = null!;
     
     public override void Configure()
     {
@@ -21,7 +16,7 @@ public class GetAllPhysiciansEndpoint : EndpointWithoutRequest<GetAllPhysiciansR
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var physicians = await _physicianService.GetAllPhysiciansAsync();
+        var physicians = await PhysicianService.GetAllPhysiciansAsync();
         
         Response = new GetAllPhysiciansResponse
         {

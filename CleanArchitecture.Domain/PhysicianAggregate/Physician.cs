@@ -2,7 +2,7 @@ using CleanArchitecture.Domain.Common;
 
 namespace CleanArchitecture.Domain.PhysicianAggregate;
 
-public class Physician : IEntity, IAggregateRoot
+public class Physician : Entity, IAggregateRoot
 {
     public int Id { get; set; }
     

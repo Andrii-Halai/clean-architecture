@@ -1,3 +1,4 @@
+using CleanArchitecture.Domain.PhysicianAggregate;
 using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Models;
 
 namespace CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite;
@@ -7,7 +8,7 @@ using System;
 
 public class CPContext : DbContext
 {
-    public DbSet<PhysicianModel> Physicians { get; set; }
+    public DbSet<Physician> Physicians { get; set; }
 
     public string DbPath { get; }
 
