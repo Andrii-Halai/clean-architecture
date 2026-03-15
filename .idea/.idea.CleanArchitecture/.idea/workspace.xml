@@ -15,20 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Abstractions/IDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Abstractions/IDbManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/CleanArchitecture.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/CleanArchitecture.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/Physician.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/Data/MockDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/Data/MockDbManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/DbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysiciansEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysiciansEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Models/Physician.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8bc9cdb23bc146bcaaae0bb9e45e5d46d9dc00/e6/06cff9a7/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc2de29b920b4475950c0adf08f18d9923200/1d/1e1d6c89/ILogger`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8271807a61bb8a8540cf6d7a38534480374a4aac934ee4f53d7efdc9aea37ae/IOptions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,7 +84,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.CleanArchitecture.Controllers: https.executor": "Run",
-    ".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor": "Run",
+    ".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor": "Debug",
     ".NET Launch Settings Profile.Controllers.executor": "Debug",
     ".NET Launch Settings Profile.Endpoints: http.executor": "Run",
     ".NET Launch Settings Profile.Unnamed.executor": "Run",
@@ -113,7 +103,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Controllers">
+  <component name="RunManager" selected=".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http">
     <configuration name="CleanArchitecture.Controllers: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />

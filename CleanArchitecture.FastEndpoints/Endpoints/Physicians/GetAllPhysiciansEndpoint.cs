@@ -6,7 +6,12 @@ namespace CleanArchitecture.FastEndpoints.Endpoints.Physicians;
 
 public class GetAllPhysiciansEndpoint : EndpointWithoutRequest<GetAllPhysiciansResponse>
 {
-    protected IPhysicianService PhysicianService { get; set; } = null!;
+    protected IPhysicianService PhysicianService { get; }
+
+    public GetAllPhysiciansEndpoint(IPhysicianService physicianService)
+    {
+        PhysicianService = physicianService;
+    }
     
     public override void Configure()
     {
