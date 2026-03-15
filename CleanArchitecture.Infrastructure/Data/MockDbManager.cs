@@ -1,5 +1,5 @@
 using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Models;
 
 namespace CleanArchitecture.Infrastructure.Data;
 
@@ -19,13 +19,13 @@ public class MockDbManager : IDbManager
                 Id = 1,
                 Name = "John",
                 LastName = "Smith",
-                MI = "A",
+                Mi = "A",
                 Email = "john.smith@example.com",
                 Phone = "555-0100",
                 Phone2 = "555-0101",
                 Description = "Cardiologist",
                 Comment = "Senior physician",
-                IDCenter = 1,
+                Idcenter = 1,
                 NotificationTemplate = "Standard",
                 NotificationCriteria = "All alerts",
                 Npi = "1234567890"
@@ -35,13 +35,13 @@ public class MockDbManager : IDbManager
                 Id = 2,
                 Name = "Jane",
                 LastName = "Doe",
-                MI = "B",
+                Mi = "B",
                 Email = "jane.doe@example.com",
                 Phone = "555-0200",
                 Phone2 = "555-0201",
                 Description = "Neurologist",
                 Comment = "Specialist in neurology",
-                IDCenter = 2,
+                Idcenter = 2,
                 NotificationTemplate = "Urgent",
                 NotificationCriteria = "Critical only",
                 Npi = "0987654321"

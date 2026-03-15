@@ -8,6 +8,9 @@
       "sslPort": 44319
     }
   },
+  "environmentVariables": {
+    "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false"
+  },
   "profiles": {
     "http": {
       "commandName": "Project",

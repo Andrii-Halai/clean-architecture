@@ -1,4 +1,4 @@
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Models;
 
 namespace CleanArchitecture.Application.Abstractions;
 

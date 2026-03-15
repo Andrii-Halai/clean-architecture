@@ -4,7 +4,7 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <InvariantGlobalization>true</InvariantGlobalization>
+        <InvariantGlobalization>false</InvariantGlobalization>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
+      <ProjectReference Include="..\CleanArchitecture.HS\CleanArchitecture.HS.csproj" />
       <ProjectReference Include="..\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj" />
     </ItemGroup>
 

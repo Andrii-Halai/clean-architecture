@@ -6,6 +6,8 @@
     <projectFile profileName="https">CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj</projectFile>
     <projectFile profileName="http">Endpoints/Endpoints.csproj</projectFile>
     <projectFile profileName="https">Endpoints/Endpoints.csproj</projectFile>
+    <projectFile profileName="http">WebApplication1/WebApplication1.csproj</projectFile>
+    <projectFile profileName="https">WebApplication1/WebApplication1.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
@@ -13,13 +15,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Physicians/PhysicianEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Physicians/PhysicianController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Abstractions/IDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Abstractions/IDbManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/CleanArchitecture.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/CleanArchitecture.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/CleanArchitecture.Domain.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/Physician.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/Physician.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysicians.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysiciansEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetPhysicianById.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetPhysicianByIdEndpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/Physician.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/CleanArchitecture.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/Data/MockDbManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/Data/MockDbManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/DbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,16 +54,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.microsoft/usersecrets/b7c63716-5c65-4ebd-bbdf-54c97e33fe80/secrets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Configuration/DemoSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Controllers/ConfigurationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.EntityFrameworkCore/Repositories/BaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.EntityFrameworkCore/Repositories/HSPhysicianRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.HS/HsContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.HS/Repositories/HSPhysicianRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.HS/Repositories/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure.EntityFramework/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Models/Physician.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc2de29b920b4475950c0adf08f18d9923200/1d/1e1d6c89/ILogger`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8271807a61bb8a8540cf6d7a38534480374a4aac934ee4f53d7efdc9aea37ae/IOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c2fa49f697e4d07c58aa3f35484a5103de685287155db8b628f2cdce16b69/Endpoint.Send.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/eeb2b9dd749e5cf9e6eb8ca91fdbb942ffa62db3764eecd24f89b4232e801f/HostEnvironmentEnvExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk.Web/Sdk/Sdk.props" root0="FORCE_HIGHLIGHTING" />
@@ -71,28 +91,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Controllers.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Endpoints: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;ToolWindow.GitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.CleanArchitecture.Controllers: https.executor": "Run",
+    ".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor": "Run",
+    ".NET Launch Settings Profile.Controllers.executor": "Debug",
+    ".NET Launch Settings Profile.Endpoints: http.executor": "Run",
+    ".NET Launch Settings Profile.Unnamed.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Controllers">
     <configuration name="CleanArchitecture.Controllers: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
