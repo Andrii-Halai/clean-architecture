@@ -75,15 +75,15 @@ public partial class Physician : Entity
     public string ValidateNpi(string? npi)
     {
         if (string.IsNullOrWhiteSpace(npi))
-            throw new InvalidOperationException("NPI is required.");
+            throw new DomainValidationException("NPI is required.");
 
         var value = npi.Trim();
 
         // Business rule: NPI must be exactly 10 digits
         if (value.Length != 10 || !value.All(char.IsDigit))
-            throw new InvalidOperationException("NPI must contain exactly 10 digits.");
+            throw new DomainValidationException("NPI must contain exactly 10 digits.");
 
-        return npi;
+        return value;
     }
     
     public void ChangeNpi(string npi)

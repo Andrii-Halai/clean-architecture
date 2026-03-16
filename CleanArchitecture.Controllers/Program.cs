@@ -3,6 +3,7 @@ using CleanArchitecture.Application.Physicians;
 using CleanArchitecture.Domain.PhysicianAggregate;
 using CleanArchitecture.HS;
 using CleanArchitecture.HS.Repositories;
+using CleanArchitecture.Controllers.Middleware;
 // using CleanArchitecture.Infrastructure.Data;
 // using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite;
 // using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Repositories;
@@ -21,6 +22,8 @@ builder.Services.AddScoped<IPhysicianRepository, HSPhysicianRepository>();
 // builder.Services.AddScoped<CPContext, CPContext>();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
