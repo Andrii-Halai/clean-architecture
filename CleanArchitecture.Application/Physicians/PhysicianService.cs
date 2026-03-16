@@ -30,9 +30,19 @@ public class PhysicianService : IPhysicianService
     public async Task<PhysicianDto> CreatePhysicianAsync(CreatePhysicianDto physicianDto)
     {
         var entity = new Physician(
-
+            physicianDto.Name,
+            physicianDto.LastName,
+            physicianDto.MI,
+            physicianDto.Email,
+            physicianDto.Phone,
+            physicianDto.Phone2,
+            physicianDto.Description,
+            physicianDto.Comment,
+            physicianDto.IDCenter,
+            physicianDto.NotificationTemplate,
+            physicianDto.NotificationCriteria,
+            physicianDto.Npi
         );
-
         
         var createdPhysician = await _physicianRepository.CreateAsync(entity);
         await _physicianRepository.SaveChangesAsync();

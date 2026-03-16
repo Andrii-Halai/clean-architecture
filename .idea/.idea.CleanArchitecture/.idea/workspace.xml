@@ -15,10 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysiciansEndpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Endpoints/Physicians/GetAllPhysiciansEndpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/Models/Physician.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/Models/Physician.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,29 +79,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.CleanArchitecture.Controllers: https.executor": "Run",
-    ".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor": "Debug",
-    ".NET Launch Settings Profile.Controllers.executor": "Debug",
-    ".NET Launch Settings Profile.Endpoints: http.executor": "Run",
-    ".NET Launch Settings Profile.Unnamed.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.CleanArchitecture.Controllers: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Controllers.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Endpoints: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ToolWindow.GitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.CleanArchitecture.FastEndpoints: http">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Controllers">
     <configuration name="CleanArchitecture.Controllers: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -189,6 +187,7 @@
       <workItem from="1771663614468" duration="11686000" />
       <workItem from="1771695593554" duration="2967000" />
       <workItem from="1771838620441" duration="5277000" />
+      <workItem from="1773646805696" duration="1522000" />
     </task>
     <servers />
   </component>

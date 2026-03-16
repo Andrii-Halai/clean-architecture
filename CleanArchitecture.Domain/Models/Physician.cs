@@ -41,4 +41,53 @@ public partial class Physician : Entity
     public virtual ICollection<Patient> PatientIdphysicianReferringNavigations { get; set; } = new List<Patient>();
 
     public virtual ICollection<PhysicanClinicsGroup> PhysicanClinicsGroups { get; set; } = new List<PhysicanClinicsGroup>();
+    
+    public Physician() {}
+
+    public Physician(
+        string? Name,
+        string? LastName,
+        string? MI,
+        string? Email,
+        string? Phone,
+        string? Phone2,
+        string? Description,
+        string? Comment,
+        int? IDCenter,
+        string? NotificationTemplate,
+        string? NotificationCriteria,
+        string? Npi)
+    {
+        this.Name = Name;
+        this.LastName = LastName;
+        this.Mi = MI;
+        this.Email = Email;
+        this.Phone = Phone;
+        this.Phone2 = Phone2;
+        this.Description = Description;
+        this.Comment = Comment;
+        this.Idcenter = IDCenter;
+        this.NotificationTemplate = NotificationTemplate;
+        this.NotificationCriteria = NotificationCriteria;
+        Npi = ValidateNpi(Npi);
+    }
+
+    public string ValidateNpi(string? npi)
+    {
+        if (string.IsNullOrWhiteSpace(npi))
+            throw new InvalidOperationException("NPI is required.");
+
+        var value = npi.Trim();
+
+        // Business rule: NPI must be exactly 10 digits
+        if (value.Length != 10 || !value.All(char.IsDigit))
+            throw new InvalidOperationException("NPI must contain exactly 10 digits.");
+
+        return npi;
+    }
+    
+    public void ChangeNpi(string npi)
+    {
+        Npi = ValidateNpi(npi);
+    }
 }
