@@ -16,7 +16,6 @@
       <ProjectReference Include="..\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
       <ProjectReference Include="..\CleanArchitecture.HS\CleanArchitecture.HS.csproj" />
       <ProjectReference Include="..\CleanArchitecture.Infrastructure.CryptographyManager\CleanArchitecture.Infrastructure.CryptographyManager.csproj" />
-      <ProjectReference Include="..\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

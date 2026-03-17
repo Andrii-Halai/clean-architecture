@@ -1,4 +1,5 @@
 using CleanArchitecture.Application.Abstractions;
+using CleanArchitecture.Domain.Common;
 using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.Application.PortalUsers;
@@ -20,19 +21,15 @@ public class PortalUserService : IPortalUserService
         _edSae = edsae;
     }
     
-    public async Task<bool> UpdatePasswordAsync(int userId, string newPassword)
+    public async Task UpdatePasswordAsync(int userId, string newPassword)
     {
-        var portalUser = await _portalUserRepository.GetByIdAsync(userId);
-        
-        if (portalUser == null)
-        {
-            return false;
-        }
-        
         var passwordHash = _edSae.EStringAE(newPassword,"AEFTRPGEXX");
-        
-        var isOk = await _portalUserRepository.UpdatePasswordAsync(portalUser.Id, passwordHash);
-        
-        return isOk;
+
+        var updated = await _portalUserRepository.UpdatePasswordAsync(userId, passwordHash);
+
+        if (updated is null)
+        {
+            throw new NotFoundException("User not found");
+        }
     }
 }

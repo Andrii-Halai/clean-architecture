@@ -4,7 +4,7 @@ using CleanArchitecture.Application.PortalUsers;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.HS;
 using CleanArchitecture.HS.Repositories;
-using CleanArchitecture.Controllers.Middleware;
+using CleanArchitecture.WebAPI.Middleware;
 using CleanArchitecture.Infrastructure.CryptographyManager;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +13,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// builder.Services.AddSingleton<IDbManager, MockDbManager>(); // for testing purposes, change to AddScoped
 builder.Services.AddScoped<IPhysicianService, PhysicianService>();
 builder.Services.AddScoped<HsContext, HsContext>();
 builder.Services.AddScoped<IPhysicianRepository, HSPhysicianRepository>();

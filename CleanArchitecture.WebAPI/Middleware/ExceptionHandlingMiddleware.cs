@@ -1,7 +1,7 @@
 using System.Text.Json;
 using CleanArchitecture.Domain.Common;
 
-namespace CleanArchitecture.Controllers.Middleware;
+namespace CleanArchitecture.WebAPI.Middleware;
 
 public class ExceptionHandlingMiddleware
 {
@@ -19,6 +19,20 @@ public class ExceptionHandlingMiddleware
         try
         {
             await _next(context);
+        }
+        catch (NotFoundException ex)
+        {
+            _logger.LogInformation(ex, "Resource not found");
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            context.Response.ContentType = "application/json";
+
+            var payload = new
+            {
+                error = "NotFound",
+                message = ex.Message
+            };
+
+            await context.Response.WriteAsync(JsonSerializer.Serialize(payload));
         }
         catch (DomainValidationException ex)
         {
@@ -50,4 +64,3 @@ public class ExceptionHandlingMiddleware
         }
     }
 }
-

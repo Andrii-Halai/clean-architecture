@@ -2,7 +2,7 @@ using CleanArchitecture.Application.Physicians;
 using CleanArchitecture.Application.PortalUsers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.Controllers.Physicians;
+namespace CleanArchitecture.WebAPI.Controllers.Physicians;
 
 /// <summary>
 /// Physician API controller
@@ -47,15 +47,6 @@ public class PhysiciansController : ControllerBase
     {
         var physicians = await _physicianService.GetAllPhysiciansAsync();
         return Ok(physicians);
-    }
-
-    [HttpPost("update-password")]
-    public async Task<IActionResult> UpdatePassword([FromBody] ChangePasswordDto changePasswordDto)
-    {
-        var res = await _portalUserService.UpdatePasswordAsync(
-            changePasswordDto.userId, changePasswordDto.newPassword
-            );
-        return Ok(res);
     }
 }
 

@@ -2,8 +2,6 @@ using CleanArchitecture.Application.Physicians;
 using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.HS;
 using CleanArchitecture.HS.Repositories;
-using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Repositories;
-using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite;
 using FastEndpoints;
 using FastEndpoints.Swagger;
 
@@ -13,8 +11,6 @@ bld.Services
     .SwaggerDocument();
 
 bld.Services.AddScoped<IPhysicianService, PhysicianService>();
-// bld.Services.AddScoped<IPhysicianRepository, PhysicianRepository>();
-// bld.Services.AddScoped<CPContext, CPContext>();
 bld.Services.AddScoped<IPhysicianRepository, HSPhysicianRepository>();
 bld.Services.AddScoped<HsContext, HsContext>();
 

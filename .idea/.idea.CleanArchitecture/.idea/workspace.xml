@@ -14,18 +14,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cdc63ef-18cd-4b00-b08f-8fdae6803481" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/Physicians/PhysicianService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Physicians/PhysicianController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Physicians/PhysicianController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/Common/IAggregateRoot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/Models/LicenseRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/Models/LicenseRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/PhysicianAggregate/IPhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/Interfaces/IPhysicianRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/IPortalUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/IPortalUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/PortalUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/PortalUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Configuration/DemoSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Controllers/ConfigurationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Endpoints.http" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/Endpoints.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Middleware/ExceptionHandlingMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/Middleware/ExceptionHandlingMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Physicians/PhysicianController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/Controllers/Physicians/PhysicianController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Domain/Interfaces/IPortalUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Domain/Interfaces/IPortalUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/CleanArchitecture.FastEndpoints.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.FastEndpoints/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/HSPhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/HSPhysicianRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/Repository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/PortalUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.HS/Repositories/PortalUserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/CleanArchitecture.sln.DotSettings.user" afterDir="false" />
     </list>
@@ -58,15 +64,10 @@
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/ChangePasswordDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/IPortalUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Application/PortalUsers/PortalUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Configuration/DemoSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Controllers/ConfigurationController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Middleware/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Controllers/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/DomainValidationException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Common/NotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Domain/Interfaces/IPortalUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.EntityFrameworkCore/Repositories/BaseRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.EntityFrameworkCore/Repositories/HSPhysicianRepository.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,6 +81,7 @@
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/PhysicianRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CleanArchitecture.Infrastructure/EntityFrameworkCoreSqlite/Repositories/Repository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8bc9cdb23bc146bcaaae0bb9e45e5d46d9dc00/e6/06cff9a7/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c9f57cbe23d44a65a6f883892f576daf219600/5d/4e6eda4b/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fc2de29b920b4475950c0adf08f18d9923200/1d/1e1d6c89/ILogger`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/658ad1fa108317d78bcae889b6e4f9dd5327babb6582972f2dbeabf36dafa5/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -89,6 +91,7 @@
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk.Web/Sdk/Sdk.props" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/8.0.100/Sdks/Microsoft.NET.Sdk.Web/Sdk/Sdk.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -124,7 +127,7 @@
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Controllers">
     <configuration name="CleanArchitecture.Controllers: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
       <option name="LAUNCH_PROFILE_NAME" value="https" />
       <option name="USE_MONO" value="0" />
@@ -172,7 +175,7 @@
       </method>
     </configuration>
     <configuration name="Controllers" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.Controllers/CleanArchitecture.Controllers.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CleanArchitecture.WebAPI/CleanArchitecture.WebAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
       <option name="LAUNCH_PROFILE_NAME" value="http" />
       <option name="USE_MONO" value="0" />
@@ -211,13 +214,14 @@
       <workItem from="1773646805696" duration="10776000" />
       <workItem from="1773669881000" duration="1877000" />
       <workItem from="1773731632582" duration="4978000" />
-      <workItem from="1773751527120" duration="5662000" />
+      <workItem from="1773751527120" duration="11878000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

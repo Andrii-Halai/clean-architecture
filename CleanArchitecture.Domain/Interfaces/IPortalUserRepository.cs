@@ -6,5 +6,5 @@ namespace CleanArchitecture.Domain.Interfaces;
 public interface IPortalUserRepository : IRepository<LicenseRequest>
 {
     Task<LicenseRequest?> GetByIdAsync(string id);
-    Task<bool> UpdatePasswordAsync(int userId, string newPassword);
+    Task<LicenseRequest?> UpdatePasswordAsync(int userId, string newPassword);
 }
