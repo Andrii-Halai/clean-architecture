@@ -1,5 +1,5 @@
 using CleanArchitecture.Application.Physicians;
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.HS;
 using CleanArchitecture.HS.Repositories;
 using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Repositories;

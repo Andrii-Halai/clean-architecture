@@ -1,5 +1,5 @@
 using CleanArchitecture.Domain.Models;
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Interfaces;
 
 namespace CleanArchitecture.HS.Repositories;
 

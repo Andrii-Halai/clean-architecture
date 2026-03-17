@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.HS.Repositories;
 
-public class Repository<T> : IRepository<T> where T : Entity
+public class Repository<T> : IRepository<T> where T : class
 {
     protected readonly HsContext _dbContext;
     protected readonly DbSet<T> _dbSet;
@@ -20,6 +20,12 @@ public class Repository<T> : IRepository<T> where T : Entity
     }
 
     public async Task<T?> GetByIdAsync(int id)
+    {
+        var model = await _dbContext.Set<T>().FindAsync(id);
+        return model;
+    }
+    
+    public async Task<T?> GetByIdAsync(string id)
     {
         var model = await _dbContext.Set<T>().FindAsync(id);
         return model;

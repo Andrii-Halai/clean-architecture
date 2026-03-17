@@ -64,4 +64,9 @@ public partial class LicenseRequest
     public virtual ICollection<ClientApp> ClientApps { get; set; } = new List<ClientApp>();
 
     public virtual ICollection<PassCode> PassCodes { get; set; } = new List<PassCode>();
+
+    public void UpdatePassword(string newPassword)
+    {
+        Password = newPassword;
+    }
 }

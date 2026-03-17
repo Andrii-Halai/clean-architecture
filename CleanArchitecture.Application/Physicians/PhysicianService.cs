@@ -1,11 +1,8 @@
 using CleanArchitecture.Application.Abstractions;
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 
 namespace CleanArchitecture.Application.Physicians;
-
-// Todo: Зробити приклад із FastEndpoints
-// Repository pattern (generic)
 
 /// <summary>
 /// Service implementation for Physician operations

@@ -1,12 +1,11 @@
 using CleanArchitecture.Application.Abstractions;
 using CleanArchitecture.Application.Physicians;
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Application.PortalUsers;
+using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.HS;
 using CleanArchitecture.HS.Repositories;
 using CleanArchitecture.Controllers.Middleware;
-// using CleanArchitecture.Infrastructure.Data;
-// using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite;
-// using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Repositories;
+using CleanArchitecture.Infrastructure.CryptographyManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +15,12 @@ builder.Services.AddSwaggerGen();
 
 // builder.Services.AddSingleton<IDbManager, MockDbManager>(); // for testing purposes, change to AddScoped
 builder.Services.AddScoped<IPhysicianService, PhysicianService>();
-// builder.Services.AddScoped<IPhysicianRepository, PhysicianRepository>();
 builder.Services.AddScoped<HsContext, HsContext>();
 builder.Services.AddScoped<IPhysicianRepository, HSPhysicianRepository>();
-// builder.Services.AddScoped<CPContext, CPContext>();
+builder.Services.AddScoped<ICryptographyManager, CryptographyManager>();
+builder.Services.AddScoped<IPortalUserRepository, PortalUserRepository>();
+builder.Services.AddScoped<IPortalUserService, PortalUserService>();
+builder.Services.AddScoped<IEDSae, EDSae>();
 
 var app = builder.Build();
 

@@ -1,7 +1,7 @@
 using CleanArchitecture.Domain.Common;
 using CleanArchitecture.Domain.Models;
 
-namespace CleanArchitecture.Domain.PhysicianAggregate;
+namespace CleanArchitecture.Domain.Interfaces;
 
 public interface IPhysicianRepository: IRepository<Physician>
 {

@@ -1,4 +1,4 @@
-using CleanArchitecture.Domain.PhysicianAggregate;
+using CleanArchitecture.Domain.Interfaces;
 using CleanArchitecture.Domain.Models;
 using CleanArchitecture.Infrastructure.EntityFrameworkCoreSqlite.Models;
 using Microsoft.EntityFrameworkCore;

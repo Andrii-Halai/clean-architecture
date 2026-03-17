@@ -1,4 +1,5 @@
 using CleanArchitecture.Application.Physicians;
+using CleanArchitecture.Application.PortalUsers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitecture.Controllers.Physicians;
@@ -11,10 +12,12 @@ namespace CleanArchitecture.Controllers.Physicians;
 public class PhysiciansController : ControllerBase
 {
     private readonly IPhysicianService _physicianService;
+    private readonly IPortalUserService _portalUserService;
 
-    public PhysiciansController(IPhysicianService physicianService)
+    public PhysiciansController(IPhysicianService physicianService, IPortalUserService portalUserService)
     {
         _physicianService = physicianService;
+        _portalUserService = portalUserService;
     }
     
     [HttpGet("{id:int}")]
@@ -44,6 +47,15 @@ public class PhysiciansController : ControllerBase
     {
         var physicians = await _physicianService.GetAllPhysiciansAsync();
         return Ok(physicians);
+    }
+
+    [HttpPost("update-password")]
+    public async Task<IActionResult> UpdatePassword([FromBody] ChangePasswordDto changePasswordDto)
+    {
+        var res = await _portalUserService.UpdatePasswordAsync(
+            changePasswordDto.userId, changePasswordDto.newPassword
+            );
+        return Ok(res);
     }
 }
 
